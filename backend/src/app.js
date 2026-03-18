@@ -1,27 +1,34 @@
 const { loadEnvFile } = require('node:process');
+const path = require('node:path');
 const express = require('express');
 const { connectToMongo } = require('./db/mongo');
 const authRouter = require('./routes/auth');
 const watchlistRouter = require('./routes/watchlist');
 
-// Load environment variables
+// Load local .env file (for local development)
 loadEnvFile();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Frontend build output directory
+const frontendDistPath = path.join(__dirname, '../../frontend/dist');
+
 // Parse JSON request body
 app.use(express.json());
 
-// Routes
+// Backend API routes
 app.use('/api/auth', authRouter);
 app.use('/api/watchlist', watchlistRouter);
+
+// Serve frontend static files
+app.use(express.static(frontendDistPath));
 
 // Start server
 connectToMongo()
   .then(() => {
-    app.listen(PORT, () => {
-      console.log(`Backend server is running on http://localhost:${PORT}`);
+    app.listen(PORT, '0.0.0.0', () => {
+      console.log(`Server is running on port ${PORT}`);
     });
   })
   .catch((error) => {
