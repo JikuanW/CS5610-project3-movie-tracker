@@ -5,8 +5,12 @@ const { connectToMongo } = require('./db/mongo');
 const authRouter = require('./routes/auth');
 const watchlistRouter = require('./routes/watchlist');
 
-// Load local .env file (for local development)
-loadEnvFile();
+// Load local .env file if it exists
+try {
+  loadEnvFile();
+} catch {
+  // Ignore missing .env file
+}
 
 const app = express();
 const PORT = process.env.PORT || 3000;
