@@ -1,0 +1,44 @@
+.watchlist-box {
+  padding: 24px;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  background-color: #fafafa;
+}
+
+.watchlist-row {
+  margin-bottom: 14px;
+}
+
+.watchlist-row label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #374151;
+}
+
+.watchlist-row textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.watchlist-message {
+  margin: 16px 0 0;
+  color: #4b5563;
+}
+
+.create-movie-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.create-movie-actions .secondary-button {
+  background-color: #e5e7eb;
+  border-color: #d1d5db;
+  color: #111827;
+}
+
+.create-movie-actions .secondary-button:hover {
+  background-color: #dbe1e8;
+}

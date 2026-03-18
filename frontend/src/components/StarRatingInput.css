@@ -1,0 +1,23 @@
+.star-rating {
+  display: flex;
+  gap: 6px;
+}
+
+.star-icon-button {
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #d1d5db;
+  font-size: 28px;
+  line-height: 1;
+  box-shadow: none;
+}
+
+.star-icon-button:hover {
+  background: transparent;
+  color: #f59e0b;
+}
+
+.active-star {
+  color: #f59e0b;
+}

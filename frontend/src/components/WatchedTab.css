@@ -1,0 +1,118 @@
+.watchlist-message {
+  margin: 16px 0 0;
+  color: #4b5563;
+}
+
+.watchlist-list {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0;
+}
+
+.watchlist-item {
+  margin-bottom: 14px;
+}
+
+.movie-card {
+  padding: 18px 18px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  background-color: #ffffff;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04);
+}
+
+.movie-card-main {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.movie-card-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.movie-card-meta {
+  margin: 0;
+  font-size: 15px;
+  color: #6b7280;
+}
+
+.movie-card-detail {
+  margin: 0;
+  line-height: 1.6;
+  color: #1f2937;
+}
+
+.movie-card-label {
+  font-weight: 700;
+  color: #111827;
+}
+
+.movie-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.movie-actions .secondary-button {
+  background-color: #2563eb;
+  border-color: #2563eb;
+  color: #ffffff;
+}
+
+.movie-actions .secondary-button:hover {
+  background-color: #1d4ed8;
+}
+
+.movie-actions .remove-button {
+  background-color: #ef4444;
+  border-color: #ef4444;
+  color: #ffffff;
+}
+
+.movie-actions .remove-button:hover {
+  background-color: #dc2626;
+}
+
+.watched-form {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.watchlist-row {
+  margin-bottom: 14px;
+}
+
+.watchlist-row label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #374151;
+}
+
+.watchlist-row textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.create-movie-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.create-movie-actions .secondary-button {
+  background-color: #e5e7eb;
+  border-color: #d1d5db;
+  color: #111827;
+}
+
+.create-movie-actions .secondary-button:hover {
+  background-color: #dbe1e8;
+}

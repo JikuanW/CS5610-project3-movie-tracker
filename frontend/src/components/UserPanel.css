@@ -1,0 +1,32 @@
+.user-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.user-panel-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  background-color: #f9fafb;
+}
+
+.user-panel-text h2 {
+  margin: 0 0 6px;
+  font-size: 24px;
+  color: #111827;
+}
+
+.user-panel-text p {
+  margin: 0;
+  color: #6b7280;
+}
+
+.user-panel-top button {
+  background-color: #2563eb;
+  border-color: #2563eb;
+}

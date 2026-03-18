@@ -1,0 +1,208 @@
+.all-movies-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.all-movies-top-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.all-movies-search-input {
+  flex: 1;
+}
+
+.all-movies-add-button {
+  white-space: nowrap;
+}
+
+.all-movies-filter-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.all-movies-filter-row select {
+  min-width: 160px;
+  flex: 1 1 160px;
+}
+
+.watchlist-message {
+  margin: 16px 0 0;
+  color: #4b5563;
+}
+
+.watchlist-list {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0;
+}
+
+.watchlist-item {
+  margin-bottom: 14px;
+}
+
+.movie-card {
+  padding: 18px 18px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  background-color: #ffffff;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04);
+}
+
+.movie-card-main {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.movie-card-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.movie-card-meta {
+  margin: 0;
+  font-size: 15px;
+  color: #6b7280;
+}
+
+.movie-card-description {
+  margin: 2px 0 0;
+  line-height: 1.6;
+  color: #374151;
+}
+
+.movie-card-detail {
+  margin: 0;
+  line-height: 1.6;
+  color: #1f2937;
+}
+
+.movie-card-label {
+  font-weight: 700;
+  color: #111827;
+}
+
+.movie-card-rating-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 4px 0 0;
+}
+
+.movie-card-stars {
+  font-size: 18px;
+  color: #f59e0b;
+  letter-spacing: 1px;
+}
+
+.movie-card-average {
+  font-size: 15px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.movie-card-no-rating {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.movie-card-status-inline {
+  margin: 0;
+  font-size: 14px;
+  color: #6b7280;
+  font-style: italic;
+}
+
+.review-card {
+  margin-bottom: 10px;
+  padding: 14px 16px;
+  background-color: #f9fafb;
+  box-shadow: none;
+}
+
+.movie-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.movie-actions .secondary-button {
+  background-color: #2563eb;
+  border-color: #2563eb;
+  color: #ffffff;
+}
+
+.movie-actions .secondary-button:hover {
+  background-color: #1d4ed8;
+}
+
+.movie-actions .secondary-button:disabled {
+  background-color: #9ca3af;
+  border-color: #9ca3af;
+  color: #ffffff;
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+.movie-actions .secondary-button:disabled:hover {
+  background-color: #9ca3af;
+}
+
+.movie-actions .remove-button {
+  background-color: #ef4444;
+  border-color: #ef4444;
+  color: #ffffff;
+}
+
+.movie-actions .remove-button:hover {
+  background-color: #dc2626;
+}
+
+.watched-form {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.watchlist-row {
+  margin-bottom: 14px;
+}
+
+.watchlist-row label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #374151;
+}
+
+.watchlist-row textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.create-movie-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.create-movie-actions .secondary-button {
+  background-color: #e5e7eb;
+  border-color: #d1d5db;
+  color: #111827;
+}
+
+.create-movie-actions .secondary-button:hover {
+  background-color: #dbe1e8;
+}
