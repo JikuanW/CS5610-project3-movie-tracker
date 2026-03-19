@@ -1,5 +1,6 @@
 import js from '@eslint/js';
 import globals from 'globals';
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 
 export default [
   {
@@ -23,4 +24,5 @@ export default [
       'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
     },
   },
+  eslintPluginPrettierRecommended,
 ];
