@@ -1,16 +1,12 @@
-const { getCurrentUser } = require('../utils/currentUser');
-
 // Require user login
-async function requireLogin(req, res, next) {
-  const user = await getCurrentUser(req);
-
-  if (!user) {
+function requireLogin(req, res, next) {
+  if (!req.isAuthenticated || !req.isAuthenticated()) {
     return res.status(401).json({
       message: 'Not logged in',
     });
   }
 
-  req.currentUser = user;
+  req.currentUser = req.user;
 
   return next();
 }
