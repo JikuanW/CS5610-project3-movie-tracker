@@ -17,7 +17,7 @@ Build a Movie Tracker web app where users can sign up and log in, manage a watch
 
 ## Design Document
 
-[View the design document](./design.md)
+[View the design document](./docs/design.md)
 
 ## Live Application
 
