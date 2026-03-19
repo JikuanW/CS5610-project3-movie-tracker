@@ -106,24 +106,24 @@ Sarah likes sharing her opinions after watching a movie. She wants to rate movie
 
 ## Register page
 
-![Screenshot](./docs/mockups/register.png)
+![Screenshot](./mockups/register.png)
 
 ## Login page
 
-![Screenshot](./docs/mockups/login.png)
+![Screenshot](./mockups/login.png)
 
 ## Want to Watch page
 
-![Screenshot](./docs/mockups/want_to_watch.png)
+![Screenshot](./mockups/want_to_watch.png)
 
 ## Watched page
 
-![Screenshot](./docs/mockups/watched.png)
+![Screenshot](./mockups/watched.png)
 
 ## All Movies page
 
-![Screenshot](./docs/mockups/all_movies.png)
+![Screenshot](./mockups/all_movies.png)
 
 ## Create New Movie page
 
-![Screenshot](./docs/mockups/create_new_movie.png)
+![Screenshot](./mockups/create_new_movie.png)
