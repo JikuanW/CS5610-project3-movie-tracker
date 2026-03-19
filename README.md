@@ -43,6 +43,7 @@ https://movie-tracker-4eoz.onrender.com
    MONGODB_URI=your_mongodb_connection_string
    DB_NAME=movie_tracker
    PORT=3000
+   ADMIN_PASSWORD=your_admin_password
    ```
 
 4. Seed the movie collection with synthetic data:
@@ -106,3 +107,7 @@ This script adds up to 1200 synthetic movies into the movies collection and only
 ### Admin Account
 
 The admin account has all the same functions as a normal user. In addition, the admin can edit movie information and delete movies.
+
+Username: admin
+
+Password: the value of ADMIN_PASSWORD in backend/.env

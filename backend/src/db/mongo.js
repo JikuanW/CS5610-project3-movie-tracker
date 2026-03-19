@@ -7,8 +7,14 @@ let database;
 
 // Create or update admin account
 async function ensureAdminUser(db) {
+  const adminPassword = process.env.ADMIN_PASSWORD;
+
+  if (!adminPassword) {
+    throw new Error('ADMIN_PASSWORD is missing');
+  }
+
   const users = db.collection('users');
-  const adminPasswordHash = hashPassword('admin');
+  const adminPasswordHash = hashPassword(adminPassword);
   const adminUser = await users.findOne({ username: 'admin' });
 
   if (!adminUser) {
