@@ -20,6 +20,7 @@ configurePassport();
 const app = express();
 const PORT = process.env.PORT || 3000;
 const SESSION_MAX_AGE = 1000 * 60 * 60 * 24 * 7;
+const SESSION_SECRET = process.env.SESSION_SECRET;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -29,11 +30,15 @@ const frontendDistPath = path.join(__dirname, '../../frontend/dist');
 // Parse JSON request body
 app.use(express.json());
 
+if (!SESSION_SECRET) {
+  throw new Error('SESSION_SECRET is missing');
+}
+
 // Session cookie middleware
 app.use(
   session({
     name: 'sessionToken',
-    secret: process.env.SESSION_SECRET || 'movie_tracker_session_secret',
+    secret: SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
     cookie: {

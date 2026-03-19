@@ -43,6 +43,7 @@ https://movie-tracker-4eoz.onrender.com
    MONGODB_URI=your_mongodb_connection_string
    DB_NAME=movie_tracker
    PORT=3000
+   SESSION_SECRET=your_session_secret
    ADMIN_PASSWORD=your_admin_password
    ```
 
