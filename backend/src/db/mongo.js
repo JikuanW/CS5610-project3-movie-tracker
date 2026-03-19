@@ -48,15 +48,13 @@ async function connectToMongo() {
     database = client.db(dbName);
 
     // Create indexes
-    await database.collection('movies').createIndex(
-      { title: 1 },
-      { unique: true }
-    );
+    await database
+      .collection('movies')
+      .createIndex({ title: 1 }, { unique: true });
 
-    await database.collection('userMovies').createIndex(
-      { userId: 1, movieId: 1 },
-      { unique: true }
-    );
+    await database
+      .collection('userMovies')
+      .createIndex({ userId: 1, movieId: 1 }, { unique: true });
 
     // Make sure admin account exists
     await ensureAdminUser(database);

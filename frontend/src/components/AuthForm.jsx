@@ -75,9 +75,7 @@ function AuthForm({ onLogin }) {
           />
         </div>
 
-        <button type="submit">
-          {mode === 'login' ? 'Login' : 'Register'}
-        </button>
+        <button type="submit">{mode === 'login' ? 'Login' : 'Register'}</button>
       </form>
 
       {message && <p className="auth-message">{message}</p>}

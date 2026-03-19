@@ -474,7 +474,9 @@ function WatchlistPage({ user, onOpenCreateMovie, initialTab }) {
       <div className="movie-tabs">
         <button
           type="button"
-          className={activeTab === 'watchlist' ? 'movie-tab active-tab' : 'movie-tab'}
+          className={
+            activeTab === 'watchlist' ? 'movie-tab active-tab' : 'movie-tab'
+          }
           onClick={() => handleSwitchTab('watchlist')}
         >
           Want to Watch
@@ -482,7 +484,9 @@ function WatchlistPage({ user, onOpenCreateMovie, initialTab }) {
 
         <button
           type="button"
-          className={activeTab === 'watched' ? 'movie-tab active-tab' : 'movie-tab'}
+          className={
+            activeTab === 'watched' ? 'movie-tab active-tab' : 'movie-tab'
+          }
           onClick={() => handleSwitchTab('watched')}
         >
           Watched
@@ -490,7 +494,9 @@ function WatchlistPage({ user, onOpenCreateMovie, initialTab }) {
 
         <button
           type="button"
-          className={activeTab === 'allMovies' ? 'movie-tab active-tab' : 'movie-tab'}
+          className={
+            activeTab === 'allMovies' ? 'movie-tab active-tab' : 'movie-tab'
+          }
           onClick={() => handleSwitchTab('allMovies')}
         >
           All Movies
@@ -585,7 +591,9 @@ function WatchlistPage({ user, onOpenCreateMovie, initialTab }) {
           editingAllMovieDescription={editingAllMovieDescription}
           onEditingAllMovieDescriptionChange={setEditingAllMovieDescription}
           editingAllMovieReleaseYear={editingAllMovieReleaseYear}
-          onEditingAllMovieReleaseYearChange={handleEditAllMovieReleaseYearChange}
+          onEditingAllMovieReleaseYearChange={
+            handleEditAllMovieReleaseYearChange
+          }
           onOpenEditAllMovieForm={handleOpenEditAllMovieForm}
           onDeleteAllMovie={handleDeleteAllMovie}
           onUpdateAllMovie={handleUpdateAllMovie}

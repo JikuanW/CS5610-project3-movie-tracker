@@ -18,8 +18,8 @@ function Pagination({
   return (
     <div className="pagination-box">
       <p className="pagination-summary">
-        Showing {startIndex + 1}-{Math.min(endIndex, totalMovies)} of {totalMovies}{' '}
-        movies
+        Showing {startIndex + 1}-{Math.min(endIndex, totalMovies)} of{' '}
+        {totalMovies} movies
       </p>
 
       <div className="pagination-controls">

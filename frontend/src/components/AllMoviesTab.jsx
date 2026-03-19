@@ -98,7 +98,9 @@ function AllMoviesTab({
 
           <select
             value={selectedDisplayedRating}
-            onChange={(event) => onSelectedDisplayedRatingChange(event.target.value)}
+            onChange={(event) =>
+              onSelectedDisplayedRatingChange(event.target.value)
+            }
           >
             <option value="">All Ratings</option>
             <option value="1">1 Star</option>
@@ -119,7 +121,9 @@ function AllMoviesTab({
 
           <select
             value={String(moviesPerPage)}
-            onChange={(event) => onMoviesPerPageChange(Number(event.target.value))}
+            onChange={(event) =>
+              onMoviesPerPageChange(Number(event.target.value))
+            }
           >
             <option value="12">12 per page</option>
             <option value="24">24 per page</option>
@@ -180,7 +184,9 @@ function AllMoviesTab({
                   className="secondary-button"
                   onClick={() => onViewReviews(movie.id)}
                 >
-                  {openReviewsMovieId === movie.id ? 'Hide Reviews' : 'View Reviews'}
+                  {openReviewsMovieId === movie.id
+                    ? 'Hide Reviews'
+                    : 'View Reviews'}
                 </button>
 
                 {user && user.role === 'admin' && (
@@ -210,12 +216,16 @@ function AllMoviesTab({
                   onSubmit={(event) => onUpdateAllMovie(event, movie.id)}
                 >
                   <div className="watchlist-row">
-                    <label htmlFor={`edit-title-${movie.id}`}>Movie Title</label>
+                    <label htmlFor={`edit-title-${movie.id}`}>
+                      Movie Title
+                    </label>
                     <input
                       id={`edit-title-${movie.id}`}
                       type="text"
                       value={editingAllMovieTitle}
-                      onChange={(event) => onEditingAllMovieTitleChange(event.target.value)}
+                      onChange={(event) =>
+                        onEditingAllMovieTitleChange(event.target.value)
+                      }
                     />
                   </div>
 
@@ -224,7 +234,9 @@ function AllMoviesTab({
                     <select
                       id={`edit-genre-${movie.id}`}
                       value={editingAllMovieGenre}
-                      onChange={(event) => onEditingAllMovieGenreChange(event.target.value)}
+                      onChange={(event) =>
+                        onEditingAllMovieGenreChange(event.target.value)
+                      }
                     >
                       {MOVIE_GENRES.map((genre) => (
                         <option key={genre} value={genre}>
@@ -235,7 +247,9 @@ function AllMoviesTab({
                   </div>
 
                   <div className="watchlist-row">
-                    <label htmlFor={`edit-description-${movie.id}`}>Description</label>
+                    <label htmlFor={`edit-description-${movie.id}`}>
+                      Description
+                    </label>
                     <textarea
                       id={`edit-description-${movie.id}`}
                       value={editingAllMovieDescription}
@@ -287,17 +301,22 @@ function AllMoviesTab({
                   {movieReviews.length > 0 && (
                     <ul className="watchlist-list">
                       {movieReviews.map((item) => (
-                        <li key={item.id} className="watchlist-item movie-card review-card">
+                        <li
+                          key={item.id}
+                          className="watchlist-item movie-card review-card"
+                        >
                           <div className="movie-card-main">
                             <p className="movie-card-detail">
-                              <span className="movie-card-label">User:</span> {item.username}
+                              <span className="movie-card-label">User:</span>{' '}
+                              {item.username}
                             </p>
                             <p className="movie-card-detail">
                               <span className="movie-card-label">Rating:</span>{' '}
                               {renderStars(item.rating)}
                             </p>
                             <p className="movie-card-detail">
-                              <span className="movie-card-label">Review:</span> {item.review}
+                              <span className="movie-card-label">Review:</span>{' '}
+                              {item.review}
                             </p>
                           </div>
                         </li>

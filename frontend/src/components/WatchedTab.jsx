@@ -78,7 +78,9 @@ function WatchedTab({
                   <textarea
                     id={`watched-review-${movie.id}`}
                     value={watchedReview}
-                    onChange={(event) => onWatchedReviewChange(event.target.value)}
+                    onChange={(event) =>
+                      onWatchedReviewChange(event.target.value)
+                    }
                   />
                 </div>
 
