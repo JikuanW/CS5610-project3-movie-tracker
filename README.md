@@ -109,6 +109,5 @@ This script adds up to 1200 synthetic movies into the movies collection and only
 
 The admin account has all the same functions as a normal user. In addition, the admin can edit movie information and delete movies.
 
-Username: admin
-
-Password: the value of ADMIN_PASSWORD in backend/.env
+- **Username:** `admin`
+- **Password:** the value of ADMIN_PASSWORD in backend/.env
