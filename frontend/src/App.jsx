@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import AuthForm from './components/AuthForm';
 import UserPanel from './components/UserPanel';
 import CreateMoviePage from './components/CreateMoviePage';
+import './App.css';
 
 // Root app component
 function App() {
