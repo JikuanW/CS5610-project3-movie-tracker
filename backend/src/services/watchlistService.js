@@ -1,5 +1,5 @@
-const { ObjectId } = require('mongodb');
-const { getDb } = require('../db/mongo');
+import { ObjectId } from 'mongodb';
+import { getDb } from '../db/mongo.js';
 
 // Format user movie data
 function formatUserMovie(movie, releaseYear) {
@@ -451,7 +451,7 @@ async function deleteUserMovie(userId, id) {
   };
 }
 
-module.exports = {
+export {
   getUserMoviesByStatus,
   getAllMoviesForUser,
   getMovieReviews,

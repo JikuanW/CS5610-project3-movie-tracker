@@ -1,5 +1,5 @@
-const express = require('express');
-const {
+import express from 'express';
+import {
   getWatchlist,
   getWatchedList,
   getAllMovies,
@@ -11,8 +11,8 @@ const {
   markMovieAsWatched,
   updateMovieReview,
   removeMovie,
-} = require('../controllers/watchlistController');
-const { requireLogin, requireAdmin } = require('../middlewares/auth');
+} from '../controllers/watchlistController.js';
+import { requireLogin, requireAdmin } from '../middlewares/auth.js';
 
 const router = express.Router();
 
@@ -59,4 +59,4 @@ router.patch('/:id/review', requireLogin, updateMovieReview);
 // Remove movie from user's list
 router.delete('/:id', requireLogin, removeMovie);
 
-module.exports = router;
+export default router;

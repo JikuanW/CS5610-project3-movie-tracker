@@ -1,4 +1,4 @@
-const { randomBytes, scryptSync } = require('node:crypto');
+import { randomBytes, scryptSync } from 'node:crypto';
 
 // Create password hash
 function hashPassword(password) {
@@ -23,7 +23,4 @@ function verifyPassword(password, savedPassword) {
   return hash === savedHash;
 }
 
-module.exports = {
-  hashPassword,
-  verifyPassword,
-};
+export { hashPassword, verifyPassword };

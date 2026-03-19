@@ -1,5 +1,5 @@
-const { MongoClient } = require('mongodb');
-const { hashPassword } = require('../utils/password');
+import { MongoClient } from 'mongodb';
+import { hashPassword } from '../utils/password.js';
 
 // Database connection objects
 let client;
@@ -74,7 +74,4 @@ function getDb() {
   return database;
 }
 
-module.exports = {
-  connectToMongo,
-  getDb,
-};
+export { connectToMongo, getDb };

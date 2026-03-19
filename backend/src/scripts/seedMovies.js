@@ -1,5 +1,5 @@
-const { loadEnvFile } = require('node:process');
-const { MongoClient } = require('mongodb');
+import { loadEnvFile } from 'node:process';
+import { MongoClient } from 'mongodb';
 
 // Load environment variables
 loadEnvFile();

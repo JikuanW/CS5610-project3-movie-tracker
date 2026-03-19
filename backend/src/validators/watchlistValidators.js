@@ -1,4 +1,4 @@
-const { ObjectId } = require('mongodb');
+import { ObjectId } from 'mongodb';
 
 // Trim text input
 function getTrimmedText(value) {
@@ -74,7 +74,7 @@ function validateReviewInput(reviewInput) {
   };
 }
 
-module.exports = {
+export {
   getTrimmedText,
   isValidObjectId,
   getMovieInput,

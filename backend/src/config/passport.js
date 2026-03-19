@@ -1,8 +1,10 @@
-const passport = require('passport');
-const { Strategy: LocalStrategy } = require('passport-local');
-const { ObjectId } = require('mongodb');
-const { getDb } = require('../db/mongo');
-const { verifyPassword } = require('../utils/password');
+import passport from 'passport';
+import passportLocal from 'passport-local';
+import { ObjectId } from 'mongodb';
+import { getDb } from '../db/mongo.js';
+import { verifyPassword } from '../utils/password.js';
+
+const { Strategy: LocalStrategy } = passportLocal;
 
 // Configure passport local strategy and session handling
 function configurePassport() {
@@ -48,7 +50,4 @@ function configurePassport() {
   });
 }
 
-module.exports = {
-  passport,
-  configurePassport,
-};
+export { passport, configurePassport };

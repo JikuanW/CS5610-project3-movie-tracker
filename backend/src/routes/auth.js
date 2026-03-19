@@ -1,7 +1,7 @@
-const express = require('express');
-const { passport } = require('../config/passport');
-const { getDb } = require('../db/mongo');
-const { hashPassword } = require('../utils/password');
+import express from 'express';
+import { passport } from '../config/passport.js';
+import { getDb } from '../db/mongo.js';
+import { hashPassword } from '../utils/password.js';
 
 const router = express.Router();
 
@@ -126,4 +126,4 @@ router.post('/logout', (req, res, next) => {
   });
 });
 
-module.exports = router;
+export default router;

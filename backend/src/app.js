@@ -1,11 +1,12 @@
-const { loadEnvFile } = require('node:process');
-const path = require('node:path');
-const express = require('express');
-const session = require('express-session');
-const { connectToMongo } = require('./db/mongo');
-const { passport, configurePassport } = require('./config/passport');
-const authRouter = require('./routes/auth');
-const watchlistRouter = require('./routes/watchlist');
+import { loadEnvFile } from 'node:process';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import express from 'express';
+import session from 'express-session';
+import { connectToMongo } from './db/mongo.js';
+import { passport, configurePassport } from './config/passport.js';
+import authRouter from './routes/auth.js';
+import watchlistRouter from './routes/watchlist.js';
 
 // Load local .env file if it exists
 try {
@@ -19,6 +20,8 @@ configurePassport();
 const app = express();
 const PORT = process.env.PORT || 3000;
 const SESSION_MAX_AGE = 1000 * 60 * 60 * 24 * 7;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Frontend build output directory
 const frontendDistPath = path.join(__dirname, '../../frontend/dist');

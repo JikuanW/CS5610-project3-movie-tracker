@@ -22,7 +22,4 @@ function requireAdmin(req, res, next) {
   return next();
 }
 
-module.exports = {
-  requireLogin,
-  requireAdmin,
-};
+export { requireLogin, requireAdmin };

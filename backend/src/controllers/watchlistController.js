@@ -1,4 +1,4 @@
-const {
+import {
   getUserMoviesByStatus,
   getAllMoviesForUser,
   getMovieReviews,
@@ -9,15 +9,15 @@ const {
   moveMovieToWatched,
   updateWatchedMovieReview,
   deleteUserMovie,
-} = require('../services/watchlistService');
-const {
+} from '../services/watchlistService.js';
+import {
   getTrimmedText,
   isValidObjectId,
   getMovieInput,
   validateMovieInput,
   getReviewInput,
   validateReviewInput,
-} = require('../validators/watchlistValidators');
+} from '../validators/watchlistValidators.js';
 
 // Get want-to-watch list
 async function getWatchlist(req, res) {
@@ -284,7 +284,7 @@ async function removeMovie(req, res) {
   });
 }
 
-module.exports = {
+export {
   getWatchlist,
   getWatchedList,
   getAllMovies,
